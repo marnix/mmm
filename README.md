@@ -45,3 +45,34 @@ Theories" (Springer-Verlag 1992), pp. 567-581 in Automated Deduction|CADE-11,
 volume 607 of Lecture Notes in Computer
 Science](http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.36.8717).
 
+
+## Initial ideas
+
+As far as I currently can see, three mechanisms would be sufficient:
+ - Combine two `.mm` files 'in sequence';
+ - Transform a `.mm` file into a new one through renaming and selection;
+ - Transform a `.mm` file into a new one through expanding abbreviations.
+
+### Mechanism: Combining in sequence
+
+(TODO)
+
+### Mechanism: Renaming and selection
+
+(TODO)
+
+### Mechanism: Expanding abbreviations
+
+(TODO)
+
+### How to add this to Metamath?
+
+(TODO: Options I see:
+
+ - an external tool that transforms .mm files based on 'link' / 'module
+   description' files; or
+ - an extension to the Metamath language, allowing, e.g., `$< ... $>` import
+   statements which contain the transformation instructions.
+
+)
+
