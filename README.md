@@ -53,17 +53,39 @@ As far as I currently can see, three mechanisms would be sufficient:
  - Transform a `.mm` file into a new one through renaming and selection;
  - Transform a `.mm` file into a new one through expanding abbreviations.
 
-### Mechanism: Combining in sequence
+The following principle will guide the design for these transformations:
 
-(TODO)
+> If the original `.mm` files verify correctly, and the transformation succeed,
+> then the resulting `.mm` file should also verify correctly.
 
-### Mechanism: Renaming and selection
+(Note: The nice thing is that the Metamath proof verifiers can protect against
+incorrectly designed or implemented transformations.)
 
-(TODO)
+### Mechanism: Combining files in sequence
 
-### Mechanism: Expanding abbreviations
+To combine files in sequence, we take all of the first file, and then all of
+the second file, except that we leave out all axioms (`$a`) from the second
+file which are identical to theorems (`$p`) in the first file.
 
-(TODO)
+(TODO: Enhance.)
+
+### Mechanism: Renaming and selection of statements
+
+In this transformation, one can change the labels of statements, and leave out
+specific statements (and all later statements whose proofs refer to them).
+
+This is useful as a preparation for combining files in sequence, to prevent
+statement name collisions.
+
+(TODO: Enhance.)
+
+### Mechanism: Expanding constants using abbreviations
+
+This is the most complex transformation, where an abbreviation specifies how to
+replace one constant or expression by another, optionally adding one or more
+`$e` or `$f` hypotheses.
+
+(TODO: Design and write down the details.)
 
 ### How to add this to Metamath?
 
@@ -74,5 +96,5 @@ As far as I currently can see, three mechanisms would be sufficient:
  - an extension to the Metamath language, allowing, e.g., `$< ... $>` import
    statements which contain the transformation instructions.
 
-)
+Enhance on this.)
 
