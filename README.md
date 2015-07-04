@@ -26,7 +26,7 @@ from others?
 
 This structure is implicitly present in `set.mm`, and its rendering on
 [metamath.org](http://metamath.org), the [Metamath Proof Explorer Theorem
-List](http://us.metamath.org/mpeuni/mmtheorems.html) makes this partially
+List](http://us.metamath.org/mpeuni/mmtheorems.html), makes this partially
 explicit.
 
 However, this structure can be made more explicit by allowing axiom sets to be
@@ -35,7 +35,7 @@ people who know [Ghilbert](http://ghilbert-app.appspot.com/), this corresponds
 to `.ghi` and `.gh` files.)
 
 Also, it would be helpful to be able to express things like "the positive real
-numbers form a group", and then take any theorem that holds for a group, and
+numbers form a group", and then take any theorem that holds for any group, and
 automatically have a theorem for positive real numbers.  Basically, this comes
 down to a definition/abbreviation mechanism.
 
